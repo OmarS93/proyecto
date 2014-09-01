@@ -1,0 +1,32 @@
+<%- model_class = Instructor -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:document_id) %>:</strong></dt>
+  <dd><%= @instructor.document_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:number_documnet) %>:</strong></dt>
+  <dd><%= @instructor.number_documnet %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @instructor.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:last_name) %>:</strong></dt>
+  <dd><%= @instructor.last_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:gender) %>:</strong></dt>
+  <dd><%= @instructor.gender %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
+  <dd><%= @instructor.email %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:telephone) %>:</strong></dt>
+  <dd><%= @instructor.telephone %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:area_id) %>:</strong></dt>
+  <dd><%= @instructor.area_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
+  <dd><%= @instructor.user_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:online_id) %>:</strong></dt>
+  <dd><%= @instructor.online_id %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              instructors_path, :class => 'btn btn-default'  %>
+<%= link_to t('.Edit',:default => t("helpers.links.edit")),edit_instructor_path(instructor), :class => 'btn btn-primary' %> |
+<%= link_to t('.Back',:default => t("helpers.links.back")),instructor_path(instructor), :class => 'btn btn-primary'

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  document_id: 
+  number_document: MyString
+  name: MyString
+  last_name: MyString
+  online_id: 
+  direccion: MyString
+  email: MyString
+  telephone: MyString
+  type_formation: MyString
+  date_home: 2014-08-31
+  date_end: 2014-08-31
+  group_id: 
+
+two:
+  document_id: 
+  number_document: MyString
+  name: MyString
+  last_name: MyString
+  online_id: 
+  direccion: MyString
+  email: MyString
+  telephone: MyString
+  type_formation: MyString
+  date_home: 2014-08-31
+  date_end: 2014-08-31
+  group_id: 

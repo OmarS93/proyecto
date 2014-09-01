@@ -1,0 +1,30 @@
+<%= simple_form_for [@group,@oper], :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :document_id %>
+  <%= error_span(@oper[:document_id]) %>
+  <%= f.input :number_document %>
+  <%= error_span(@oper[:number_document]) %>
+  <%= f.input :name %>
+  <%= error_span(@oper[:name]) %>
+  <%= f.input :last_name %>
+  <%= error_span(@oper[:last_name]) %>
+  <%= f.input :online_id %>
+  <%= error_span(@oper[:online_id]) %>
+  <%= f.input :direccion %>
+  <%= error_span(@oper[:direccion]) %>
+  <%= f.input :email %>
+  <%= error_span(@oper[:email]) %>
+  <%= f.input :telephone %>
+  <%= error_span(@oper[:telephone]) %>
+  <%= f.input :type_formation %>
+  <%= error_span(@oper[:type_formation]) %>
+  <%= f.input :date_home %>
+  <%= error_span(@oper[:date_home]) %>
+  <%= f.input :date_end %>
+  <%= error_span(@oper[:date_end]) %>
+  <%= f.input :group_id %>
+  <%= error_span(@oper[:group_id]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                group_opers_path(@group), :class => 'btn btn-default' %>
+<% end %>

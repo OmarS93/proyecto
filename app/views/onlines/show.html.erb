@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @online.number %>
+</p>
+
+<p>
+  <strong>Number machines:</strong>
+  <%= @online.number_machines %>
+</p>
+
+<p>
+  <strong>Number operator:</strong>
+  <%= @online.number_operator %>
+</p>
+
+<%= link_to 'Edit', edit_online_path(@online) %> |
+<%= link_to 'Back', onlines_path %>

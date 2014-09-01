@@ -1,0 +1,114 @@
+              Prefix Verb   URI Pattern                                    Controller#Action
+               opers GET    /opers(.:format)                               opers#index
+                     POST   /opers(.:format)                               opers#create
+            new_oper GET    /opers/new(.:format)                           opers#new
+           edit_oper GET    /opers/:id/edit(.:format)                      opers#edit
+                oper GET    /opers/:id(.:format)                           opers#show
+                     PATCH  /opers/:id(.:format)                           opers#update
+                     PUT    /opers/:id(.:format)                           opers#update
+                     DELETE /opers/:id(.:format)                           opers#destroy
+              groups GET    /groups(.:format)                              groups#index
+                     POST   /groups(.:format)                              groups#create
+           new_group GET    /groups/new(.:format)                          groups#new
+          edit_group GET    /groups/:id/edit(.:format)                     groups#edit
+               group GET    /groups/:id(.:format)                          groups#show
+                     PATCH  /groups/:id(.:format)                          groups#update
+                     PUT    /groups/:id(.:format)                          groups#update
+                     DELETE /groups/:id(.:format)                          groups#destroy
+         instructors GET    /instructors(.:format)                         instructors#index
+                     POST   /instructors(.:format)                         instructors#create
+      new_instructor GET    /instructors/new(.:format)                     instructors#new
+     edit_instructor GET    /instructors/:id/edit(.:format)                instructors#edit
+          instructor GET    /instructors/:id(.:format)                     instructors#show
+                     PATCH  /instructors/:id(.:format)                     instructors#update
+                     PUT    /instructors/:id(.:format)                     instructors#update
+                     DELETE /instructors/:id(.:format)                     instructors#destroy
+          operations GET    /operations(.:format)                          operations#index
+                     POST   /operations(.:format)                          operations#create
+       new_operation GET    /operations/new(.:format)                      operations#new
+      edit_operation GET    /operations/:id/edit(.:format)                 operations#edit
+           operation GET    /operations/:id(.:format)                      operations#show
+                     PATCH  /operations/:id(.:format)                      operations#update
+                     PUT    /operations/:id(.:format)                      operations#update
+                     DELETE /operations/:id(.:format)                      operations#destroy
+               areas GET    /areas(.:format)                               areas#index
+                     POST   /areas(.:format)                               areas#create
+            new_area GET    /areas/new(.:format)                           areas#new
+           edit_area GET    /areas/:id/edit(.:format)                      areas#edit
+                area GET    /areas/:id(.:format)                           areas#show
+                     PATCH  /areas/:id(.:format)                           areas#update
+                     PUT    /areas/:id(.:format)                           areas#update
+                     DELETE /areas/:id(.:format)                           areas#destroy
+               users GET    /users(.:format)                               users#index
+                     POST   /users(.:format)                               users#create
+            new_user GET    /users/new(.:format)                           users#new
+           edit_user GET    /users/:id/edit(.:format)                      users#edit
+                user GET    /users/:id(.:format)                           users#show
+                     PATCH  /users/:id(.:format)                           users#update
+                     PUT    /users/:id(.:format)                           users#update
+                     DELETE /users/:id(.:format)                           users#destroy
+             onlines GET    /onlines(.:format)                             onlines#index
+                     POST   /onlines(.:format)                             onlines#create
+          new_online GET    /onlines/new(.:format)                         onlines#new
+         edit_online GET    /onlines/:id/edit(.:format)                    onlines#edit
+              online GET    /onlines/:id(.:format)                         onlines#show
+                     PATCH  /onlines/:id(.:format)                         onlines#update
+                     PUT    /onlines/:id(.:format)                         onlines#update
+                     DELETE /onlines/:id(.:format)                         onlines#destroy
+           documents GET    /documents(.:format)                           documents#index
+                     POST   /documents(.:format)                           documents#create
+        new_document GET    /documents/new(.:format)                       documents#new
+       edit_document GET    /documents/:id/edit(.:format)                  documents#edit
+            document GET    /documents/:id(.:format)                       documents#show
+                     PATCH  /documents/:id(.:format)                       documents#update
+                     PUT    /documents/:id(.:format)                       documents#update
+                     DELETE /documents/:id(.:format)                       documents#destroy
+     area_operations GET    /areas/:area_id/operations(.:format)           operations#index
+                     POST   /areas/:area_id/operations(.:format)           operations#create
+  new_area_operation GET    /areas/:area_id/operations/new(.:format)       operations#new
+ edit_area_operation GET    /areas/:area_id/operations/:id/edit(.:format)  operations#edit
+      area_operation GET    /areas/:area_id/operations/:id(.:format)       operations#show
+                     PATCH  /areas/:area_id/operations/:id(.:format)       operations#update
+                     PUT    /areas/:area_id/operations/:id(.:format)       operations#update
+                     DELETE /areas/:area_id/operations/:id(.:format)       operations#destroy
+                     GET    /areas(.:format)                               areas#index
+                     POST   /areas(.:format)                               areas#create
+                     GET    /areas/new(.:format)                           areas#new
+                     GET    /areas/:id/edit(.:format)                      areas#edit
+                     GET    /areas/:id(.:format)                           areas#show
+                     PATCH  /areas/:id(.:format)                           areas#update
+                     PUT    /areas/:id(.:format)                           areas#update
+                     DELETE /areas/:id(.:format)                           areas#destroy
+    area_instructors GET    /areas/:area_id/instructors(.:format)          instructors#index
+                     POST   /areas/:area_id/instructors(.:format)          instructors#create
+ new_area_instructor GET    /areas/:area_id/instructors/new(.:format)      instructors#new
+edit_area_instructor GET    /areas/:area_id/instructors/:id/edit(.:format) instructors#edit
+     area_instructor GET    /areas/:area_id/instructors/:id(.:format)      instructors#show
+                     PATCH  /areas/:area_id/instructors/:id(.:format)      instructors#update
+                     PUT    /areas/:area_id/instructors/:id(.:format)      instructors#update
+                     DELETE /areas/:area_id/instructors/:id(.:format)      instructors#destroy
+                     GET    /areas(.:format)                               areas#index
+                     POST   /areas(.:format)                               areas#create
+                     GET    /areas/new(.:format)                           areas#new
+                     GET    /areas/:id/edit(.:format)                      areas#edit
+                     GET    /areas/:id(.:format)                           areas#show
+                     PATCH  /areas/:id(.:format)                           areas#update
+                     PUT    /areas/:id(.:format)                           areas#update
+                     DELETE /areas/:id(.:format)                           areas#destroy
+         group_opers GET    /groups/:group_id/opers(.:format)              opers#index
+                     POST   /groups/:group_id/opers(.:format)              opers#create
+      new_group_oper GET    /groups/:group_id/opers/new(.:format)          opers#new
+     edit_group_oper GET    /groups/:group_id/opers/:id/edit(.:format)     opers#edit
+          group_oper GET    /groups/:group_id/opers/:id(.:format)          opers#show
+                     PATCH  /groups/:group_id/opers/:id(.:format)          opers#update
+                     PUT    /groups/:group_id/opers/:id(.:format)          opers#update
+                     DELETE /groups/:group_id/opers/:id(.:format)          opers#destroy
+                     GET    /groups(.:format)                              groups#index
+                     POST   /groups(.:format)                              groups#create
+                     GET    /groups/new(.:format)                          groups#new
+                     GET    /groups/:id/edit(.:format)                     groups#edit
+                     GET    /groups/:id(.:format)                          groups#show
+                     PATCH  /groups/:id(.:format)                          groups#update
+                     PUT    /groups/:id(.:format)                          groups#update
+                     DELETE /groups/:id(.:format)                          groups#destroy
+                root GET    /                                              areas#index

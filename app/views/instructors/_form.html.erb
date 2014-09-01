@@ -1,0 +1,26 @@
+<%= simple_form_for [@area,@instructor], :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :document_id %>
+  <%= error_span(@instructor[:document_id]) %>
+  <%= f.input :number_documnet %>
+  <%= error_span(@instructor[:number_documnet]) %>
+  <%= f.input :name %>
+  <%= error_span(@instructor[:name]) %>
+  <%= f.input :last_name %>
+  <%= error_span(@instructor[:last_name]) %>
+  <%= f.input :gender %>
+  <%= error_span(@instructor[:gender]) %>
+  <%= f.input :email %>
+  <%= error_span(@instructor[:email]) %>
+  <%= f.input :telephone %>
+  <%= error_span(@instructor[:telephone]) %>
+  <%= f.input :area_id %>
+  <%= error_span(@instructor[:area_id]) %>
+  <%= f.input :user_id %>
+  <%= error_span(@instructor[:user_id]) %>
+  <%= f.input :online_id %>
+  <%= error_span(@instructor[:online_id]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                area_instructors_path(@area), :class => 'btn btn-default' %>
+<% end %>

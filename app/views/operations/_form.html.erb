@@ -1,0 +1,16 @@
+<%= simple_form_for [@area,@operation], :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :name %>
+  <%= error_span(@operation[:name]) %>
+  <%= f.input :description %>
+  <%= error_span(@operation[:description]) %>
+  <%= f.input :machine %>
+  <%= error_span(@operation[:machine]) %>
+  <%= f.input :time_stadar %>
+  <%= error_span(@operation[:time_stadar]) %>
+  <%= f.input :area_id %>
+  <%= error_span(@operation[:area_id]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+               area_operations_path(@area), :class => 'btn btn-default' %>
+<% end %>
