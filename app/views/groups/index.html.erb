@@ -1,14 +1,13 @@
 <%- model_class = Group -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1>Listado de Grupos</h1>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:number) %></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%= model_class.human_attribute_name(:Aprendices) %></th>
+      <th><%= model_class.human_attribute_name(:numero) %></th>
+      <th><%= model_class.human_attribute_name(:nombre) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -16,14 +15,12 @@
     <% @groups.each do |group| %>
       <tr>
         <td><%= link_to 'Aprendices(' + group.opers.count.to_s + ')', group_opers_path(group) %></td>
-        <td><%= link_to group.id, group_path(group) %></td>
         <td><%= group.number %></td>
         <td><%= group.name %></td>
-        <td><%=l group.created_at %></td>
         <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+          <%= link_to t('.Editar'),
                       edit_group_path(group), :class => 'btn btn-default btn-xs' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+          <%= link_to t('.Eliminar'),
                       group_path(group),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
@@ -34,6 +31,6 @@
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
+<%= link_to t('.nuevo'),
             new_group_path,
             :class => 'btn btn-primary' %>

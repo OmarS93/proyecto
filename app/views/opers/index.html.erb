@@ -1,31 +1,27 @@
 <%- model_class = Oper -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1>Listado de Operarias</h1>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:document_id) %></th>
-      <th><%= model_class.human_attribute_name(:number_document) %></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:last_name) %></th>
-      <th><%= model_class.human_attribute_name(:online_id) %></th>
+      <th><%= model_class.human_attribute_name(:documento_id) %></th>
+      <th><%= model_class.human_attribute_name(:Numero_documento) %></th>
+      <th><%= model_class.human_attribute_name(:nombres) %></th>
+      <th><%= model_class.human_attribute_name(:apellidos) %></th>
+      <th><%= model_class.human_attribute_name(:lineas_id) %></th>
       <th><%= model_class.human_attribute_name(:direccion) %></th>
       <th><%= model_class.human_attribute_name(:email) %></th>
-      <th><%= model_class.human_attribute_name(:telephone) %></th>
-      <th><%= model_class.human_attribute_name(:type_formation) %></th>
-      <th><%= model_class.human_attribute_name(:date_home) %></th>
-      <th><%= model_class.human_attribute_name(:date_end) %></th>
-      <th><%= model_class.human_attribute_name(:group_id) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%= model_class.human_attribute_name(:telefono) %></th>
+      <th><%= model_class.human_attribute_name(:formacion) %></th>
+      <th><%= model_class.human_attribute_name(:fecha_inicio) %></th>
+      <th><%= model_class.human_attribute_name(:fecha_fin) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <% @opers.each do |oper| %>
       <tr>
-        <td><%= link_to oper.id, oper_path(oper) %></td>
         <td><%= oper.document_id %></td>
         <td><%= oper.number_document %></td>
         <td><%= oper.name %></td>
@@ -37,17 +33,22 @@
         <td><%= oper.type_formation %></td>
         <td><%= oper.date_home %></td>
         <td><%= oper.date_end %></td>
-        <td><%= oper.group_id %></td>
-        <td><%=l oper.created_at %></td>
         <td>
-           <%= link_to t('.Edit',:default => t("helpers.links.edit")),edit_group_oper_path(@group,oper), :class => 'btn btn-danger' %>
-          <%= link_to t('.destroy',:default => t("helpers.links.destroy")),group_oper_path(@group,oper), :method => :delete,:data => {:confirm => t('.confirm',:default => t("helpers.links.confirm", :default =>'Are you sure?'))},:class => 'btn btn-danger' %>
+           <%= link_to t('.Editar'),edit_group_oper_path(@group,oper), :class => 'btn btn-danger' %>
+          <%= link_to t('.Eliminar'),group_oper_path(@group,oper), :method => :delete,:data => {:confirm => t('.confirm',:default => t("helpers.links.confirm", :default =>'Are you sure?'))},:class => 'btn btn-danger' %>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
+<%= link_to t('.nuevo'),
             new_group_oper_path(@group),
             :class => 'btn btn-primary' %>
+
+<%= link_to 'Atras', groups_path , :class => 'btn btn-primary' %>
+<br>
+
+<%= will_paginate @opers, renderer: BootstrapPagination::Rails %>
+<br>
+Operarias: <%= @opers.count %>

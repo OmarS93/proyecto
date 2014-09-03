@@ -4,7 +4,8 @@ class InstructorsController < ApplicationController
   # GET /instructors
   # GET /instructors.json
   def index
-    @instructors = @area.instructors.all
+    @instructors = @area.instructors.search(params[:search], params[:page])
+    #@instructors = Instructor.search(params[:search], params[:page])
   end
 
   # GET /instructors/1
@@ -70,6 +71,6 @@ class InstructorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def instructor_params
-      params.require(:instructor).permit(:document_id, :number_documnet, :name, :last_name, :gender, :email, :telephone, :area_id, :user_id, :online_id)
+      params.require(:instructor).permit(:document_id, :number_documnet, :name, :last_name, :gender, :email, :telephone, :area_id, :userr_id, :online_id)
     end
 end

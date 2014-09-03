@@ -9,7 +9,7 @@ class CreateInstructors < ActiveRecord::Migration
       t.string :email
       t.string :telephone
       t.references :area, index: true
-      t.references :user, index: true
+      t.references :userr, index: true
       t.references :online, index: true
 
       t.timestamps

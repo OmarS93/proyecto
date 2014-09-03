@@ -1,11 +1,11 @@
-<h1>Listing onlines</h1>
+<h1>Listado de lineas</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Number</th>
-      <th>Number machines</th>
-      <th>Number operator</th>
+      <th>Numero</th>
+      <th>Numero de maquinas</th>
+      <th>Numero de operarias</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,9 +16,9 @@
         <td><%= online.number %></td>
         <td><%= online.number_machines %></td>
         <td><%= online.number_operator %></td>
-        <td><%= link_to 'Show', online %></td>
-        <td><%= link_to 'Edit', edit_online_path(online) %></td>
-        <td><%= link_to 'Destroy', online, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', online %></td>
+        <td><%= link_to 'Editar', edit_online_path(online) %></td>
+        <td><%= link_to 'Eliminar', online, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Online', new_online_path %>
+<%= link_to 'Nueva linea', new_online_path %>

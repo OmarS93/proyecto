@@ -13,6 +13,11 @@
 
 ActiveRecord::Schema.define(version: 20140831222300) do
 
+  create_table "__sm_ext_mgmt", force: true do |t|
+    t.text "type",  null: false
+    t.text "value"
+  end
+
   create_table "areas", force: true do |t|
     t.string   "name"
     t.text     "description"
@@ -43,7 +48,7 @@ ActiveRecord::Schema.define(version: 20140831222300) do
     t.string   "email"
     t.string   "telephone"
     t.integer  "area_id"
-    t.integer  "user_id"
+    t.integer  "userr_id"
     t.integer  "online_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -52,7 +57,7 @@ ActiveRecord::Schema.define(version: 20140831222300) do
   add_index "instructors", ["area_id"], name: "index_instructors_on_area_id"
   add_index "instructors", ["document_id"], name: "index_instructors_on_document_id"
   add_index "instructors", ["online_id"], name: "index_instructors_on_online_id"
-  add_index "instructors", ["user_id"], name: "index_instructors_on_user_id"
+  add_index "instructors", ["userr_id"], name: "index_instructors_on_userr_id"
 
   create_table "onlines", force: true do |t|
     t.string   "number"
@@ -95,7 +100,7 @@ ActiveRecord::Schema.define(version: 20140831222300) do
   add_index "opers", ["group_id"], name: "index_opers_on_group_id"
   add_index "opers", ["online_id"], name: "index_opers_on_online_id"
 
-  create_table "users", force: true do |t|
+  create_table "userrs", force: true do |t|
     t.string   "name"
     t.string   "description"
     t.datetime "created_at"

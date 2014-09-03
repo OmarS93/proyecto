@@ -16,10 +16,10 @@
   <dd><%= @operation.area_id %></dd>
 </dl>
 
-<%= link_to t('.Edit',:default => t("helpers.links.edit")),edit_operation_path(operation), :class => 'btn btn-primary' %> |
-<%= link_to t('.Back',:default => t("helpers.links.back")),operation_path(operation), :class => 'btn btn-primary'
+<%= link_to t('.Editar'),edit_operation_path(operation), :class => 'btn btn-primary' %> |
+<%= link_to t('.Atras'),operation_path(operation), :class => 'btn btn-primary'
 
-<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+<%= link_to t('.Eliminar'),
               operation_path(@operation),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },

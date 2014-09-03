@@ -1,10 +1,17 @@
 <%= simple_form_for @area, :html => { :class => 'form-horizontal' } do |f| %>
-  <%= f.input :name %>
+<div class="field">
+  <%= f.label :Nombre %><br>
+  <%= f.text_field :name %>
   <%= error_span(@area[:name]) %>
-  <%= f.input :description %>
+</div>
+<div class="text">
+  <%= f.label :Descripcion %><br>  
+  <%= f.text_field :description %>
   <%= error_span(@area[:description]) %>
-
-  <%= f.button :submit, :class => 'btn-primary' %>
-  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+</div>
+<div class="actions">
+  <%= f.button :submit, "Guardar" , :class => 'btn-primary' %>
+  <%= link_to t('.cancelar'),
                 areas_path, :class => 'btn btn-default' %>
+</div>                
 <% end %>

@@ -1,26 +1,58 @@
 <%= simple_form_for [@area,@instructor], :html => { :class => 'form-horizontal' } do |f| %>
-  <%= f.input :document_id %>
+<div class="field">
+  <%= f.label :Documento %><br>
+  <%= f.text_field :document_id %>
   <%= error_span(@instructor[:document_id]) %>
-  <%= f.input :number_documnet %>
+</div>
+<div class="field">
+  <%= f.label :Numero_Documento %><br>  
+  <%= f.text_field :number_documnet %>
   <%= error_span(@instructor[:number_documnet]) %>
-  <%= f.input :name %>
+</div>
+<div class="field"
+  <%= f.label :Nombres %><br>  
+  <%= f.text_field :name %>
   <%= error_span(@instructor[:name]) %>
-  <%= f.input :last_name %>
+</div>
+<div class="field">
+  <%= f.label :Apellidos %><br>  
+  <%= f.text_field :last_name %>
   <%= error_span(@instructor[:last_name]) %>
-  <%= f.input :gender %>
+</div>
+<div class="field">
+  <%= f.label :Genero %><br>  
+  <%= f.text_field :gender %>
   <%= error_span(@instructor[:gender]) %>
-  <%= f.input :email %>
+</div>
+<div class="field">
+  <%= f.label :Email %><br>  
+  <%= f.text_field :email %>
   <%= error_span(@instructor[:email]) %>
-  <%= f.input :telephone %>
+</div>
+<div class="field">
+  <%= f.label :Telefono %><br>  
+  <%= f.text_field :telephone %>
   <%= error_span(@instructor[:telephone]) %>
-  <%= f.input :area_id %>
+</div>
+<div class="field">
+  <%= f.label :Area %><br>  
+  <%= f.text_field :area_id %>
   <%= error_span(@instructor[:area_id]) %>
-  <%= f.input :user_id %>
-  <%= error_span(@instructor[:user_id]) %>
-  <%= f.input :online_id %>
+</div>
+<div class="field">
+  <%= f.label :Rol %><br>  
+  <%= f.text_field :userr_id %>
+  <%= error_span(@instructor[:userr_id]) %>
+</div>
+<div class="field">
+  <%= f.label :Linea %><br>  
+  <%= f.text_field :online_id %>
   <%= error_span(@instructor[:online_id]) %>
+</div>
 
-  <%= f.button :submit, :class => 'btn-primary' %>
-  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+<div class="actions">
+  <%= f.button :submit, "Guardar" , :class => 'btn-primary' %>
+  <%= link_to t('.cancelar'),
                 area_instructors_path(@area), :class => 'btn btn-default' %>
+</div>                
 <% end %>

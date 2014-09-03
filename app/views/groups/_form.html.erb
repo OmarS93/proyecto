@@ -1,10 +1,18 @@
 <%= simple_form_for @group, :html => { :class => 'form-horizontal' } do |f| %>
-  <%= f.input :number %>
+<div class="field">
+  <%= f.label :Numero %><br>
+  <%= f.text_field :number %>
   <%= error_span(@group[:number]) %>
-  <%= f.input :name %>
+</div>
+<div class="field">
+  <%= f.label :Nombre %><br>  
+  <%= f.text_field :name %>
   <%= error_span(@group[:name]) %>
-
-  <%= f.button :submit, :class => 'btn-primary' %>
-  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+</div>
+<div class="actions">
+  <%= f.button :submit, "Guardar" , :class => 'btn-primary' %>
+  <%= link_to t('.cancelar'),
                 groups_path, :class => 'btn btn-default' %>
+</div>                
 <% end %>
+

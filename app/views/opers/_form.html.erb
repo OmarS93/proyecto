@@ -1,30 +1,85 @@
 <%= simple_form_for [@group,@oper], :html => { :class => 'form-horizontal' } do |f| %>
-  <%= f.input :document_id %>
+<div class="field">
+  <%= f.label :Documento %><br>
+  <%= f.text_field :document_id %>
   <%= error_span(@oper[:document_id]) %>
-  <%= f.input :number_document %>
+</div>
+<div class="field">  
+  <%= f.label :Numero_documento %><br>
+  <%= f.text_field :number_document %>
   <%= error_span(@oper[:number_document]) %>
-  <%= f.input :name %>
+</div>
+<div class="field">  
+  <%= f.label :Nombres %><br>
+  <%= f.text_field :name %>
   <%= error_span(@oper[:name]) %>
-  <%= f.input :last_name %>
+</div>
+<div class="field">  
+  <%= f.label :Apellidos %><br>
+  <%= f.text_field :last_name %>
   <%= error_span(@oper[:last_name]) %>
-  <%= f.input :online_id %>
+</div>
+<div class="field"> 
+  <%= f.label :Lineas %><br>
+  <%= f.text_field :online_id %>
   <%= error_span(@oper[:online_id]) %>
-  <%= f.input :direccion %>
+</div>
+<div class="field">
+  <%= f.label :Direccion %><br>  
+  <%= f.text_field :direccion %>
   <%= error_span(@oper[:direccion]) %>
-  <%= f.input :email %>
+</div>
+<div class="field">
+  <%= f.label :Email %><br>
+  <%= f.text_field :email %>
   <%= error_span(@oper[:email]) %>
-  <%= f.input :telephone %>
+</div>
+<div class="field"> 
+  <%= f.label :Telefono %><br> 
+  <%= f.text_field :telephone %>
   <%= error_span(@oper[:telephone]) %>
-  <%= f.input :type_formation %>
+</div>  
+  <%= f.label :Formacion %><br>
+  <%= f.text_field :type_formation %>
   <%= error_span(@oper[:type_formation]) %>
-  <%= f.input :date_home %>
+<div class="field">  
+  <%= f.label :Fecha_Inicio %><br>
+  <%= f.text_field :date_home, class: 'datepicker' %>
+  <script type="text/javascript">
+      $('.datepicker').datepicker({
+        language: "es",
+        format: "yyyy/mm/dd",
+        keyboardNavigation: false,
+        forceParse: false,
+        autoclose: true,
+        todayHighlight: true
+      });
+  </script>
   <%= error_span(@oper[:date_home]) %>
-  <%= f.input :date_end %>
+</div>
+<div class="field"> 
+  <%= f.label :Fecha_fin %><br> 
+  <%= f.text_field :date_end, class: 'datepicker' %>
+  <script type="text/javascript">
+      $('.datepicker').datepicker({
+        language: "es",
+        format: "yyyy/mm/dd",
+        keyboardNavigation: false,
+        forceParse: false,
+        autoclose: true,
+        todayHighlight: true
+      });
+  </script>
   <%= error_span(@oper[:date_end]) %>
-  <%= f.input :group_id %>
+</div>
+<div class="field"> 
+  <%= f.label :Grupo %><br> 
+  <%= f.text_field :group_id %>
   <%= error_span(@oper[:group_id]) %>
-
-  <%= f.button :submit, :class => 'btn-primary' %>
-  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+</div>  
+<div class="actions">
+  <%= f.button :submit, "Crear", :class => 'btn-primary' %>
+  <%= link_to t('.cancelar'),
                 group_opers_path(@group), :class => 'btn btn-default' %>
+</div>               
 <% end %>

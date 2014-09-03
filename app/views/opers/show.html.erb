@@ -1,12 +1,12 @@
 <%- model_class = Oper -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+  <h1>Operaria</h1>
 </div>
 
 <dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:document_id) %>:</strong></dt>
+  <dt><strong><%= model_class.human_attribute_name(:documento_id) %>:</strong></dt>
   <dd><%= @oper.document_id %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:number_document) %>:</strong></dt>
+  <dt><strong><%= model_class.human_attribute_name(:numbero_document) %>:</strong></dt>
   <dd><%= @oper.number_document %></dd>
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
   <dd><%= @oper.name %></dd>
@@ -30,5 +30,5 @@
   <dd><%= @oper.group_id %></dd>
 </dl>
 
-<%= link_to t('.Edit',:default => t("helpers.links.edit")),edit_oper_path(oper), :class => 'btn btn-primary' %> |
-<%= link_to t('.Back',:default => t("helpers.links.back")),oper_path(oper), :class => 'btn btn-primary'
+<%= link_to t('.Editar'),edit_oper_path(oper), :class => 'btn btn-primary' %> |
+<%= link_to t('.Atras'),oper_path(oper), :class => 'btn btn-primary'

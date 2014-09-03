@@ -1,16 +1,33 @@
 <%= simple_form_for [@area,@operation], :html => { :class => 'form-horizontal' } do |f| %>
-  <%= f.input :name %>
+<div class="field">
+  <%= f.label :Nombre %><br>
+  <%= f.text_field :name %>
   <%= error_span(@operation[:name]) %>
-  <%= f.input :description %>
+</div>
+<div class="field">
+  <%= f.label :Descripcion %><br>  
+  <%= f.text_field :description %>
   <%= error_span(@operation[:description]) %>
-  <%= f.input :machine %>
+</div>
+<div class="field">  
+  <%= f.label :Maquina %><br>
+  <%= f.text_field :machine %>
   <%= error_span(@operation[:machine]) %>
-  <%= f.input :time_stadar %>
+</div>
+<div>
+  <%= f.label :Tiempo_Estandar %><br>  
+  <%= f.text_field :time_stadar %>
   <%= error_span(@operation[:time_stadar]) %>
-  <%= f.input :area_id %>
+</div>
+<div>
+  <%= f.label :Area %><br>  
+  <%= f.text_field :area_id %>
   <%= error_span(@operation[:area_id]) %>
+</div>
 
-  <%= f.button :submit, :class => 'btn-primary' %>
-  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+<div class="actions">
+  <%= f.button :submit,"Guardar", :class => 'btn-primary' %>
+  <%= link_to t('.cancelar'),
                area_operations_path(@area), :class => 'btn btn-default' %>
+</div>               
 <% end %>

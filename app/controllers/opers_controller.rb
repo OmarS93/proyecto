@@ -4,7 +4,7 @@ class OpersController < ApplicationController
   # GET /opers
   # GET /opers.json
   def index
-    @opers = @group.opers.all
+    @opers = @group.opers.search(params[:search], params[:page])
   end
 
   # GET /opers/1

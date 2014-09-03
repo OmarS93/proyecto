@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   resources :areas
 
-  resources :users
+  resources :userrs
 
   resources :onlines
 

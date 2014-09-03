@@ -1,0 +1,27 @@
+<h1>Listing users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @userrs.each do |userr| %>
+      <tr>
+        <td><%= userr.name %></td>
+        <td><%= userr.description %></td>
+        <td><%= link_to 'Show', userr %></td>
+        <td><%= link_to 'Edit', edit_userr_path(userr) %></td>
+        <td><%= link_to 'Destroy', userr, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo rol', new_userr_path %>
