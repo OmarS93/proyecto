@@ -1,0 +1,24 @@
+<%= simple_form_for(@user) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="field">
+    <p><%= f.label :correo %><br></p>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">  
+    <p><%= f.label :contraseña %><br></p>
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+      <%= f.label :admin %>
+      <%= f.check_box :admin %>
+</div>
+<div class="field">
+    <%= f.label :user %>
+    <%= f.check_box :user %>
+</div>
+
+  <div class="actions">
+   <%= submit_tag "Guardar" , :class => "btn btn-primary" %>
+  </div>
+<% end %>

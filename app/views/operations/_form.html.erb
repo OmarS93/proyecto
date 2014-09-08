@@ -19,6 +19,11 @@
   <%= f.text_field :time_stadar %>
   <%= error_span(@operation[:time_stadar]) %>
 </div>
+<div class="field">
+  <%= f.label :Imagen %><br>
+  <%= f.file_field :image %>
+  <%= error_span(@operation[:image]) %>
+</div>
 <div>
   <%= f.label :Area %><br>  
   <%= f.text_field :area_id %>

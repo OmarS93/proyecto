@@ -1,5 +1,5 @@
 body {
-  background-color: #fff;
+  background-color: #BCBCBC ;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -68,33 +68,27 @@ div {
   }
 }
 
-/* footer */
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #999;
+.ingreso{
+  padding: 10px;
+  margin: 0px -1000px 0px 1070px;
 }
 
-footer a {
-  color: #555;
-}  
-
-footer a:hover {
-  color: #222;
+p{
+  color: white;
 }
 
-footer small {
-  float: left;
+.formu{
+  border: solid;
+  border-color: white;
+  border-radius: 10px;
+  width: 400px;
+  padding: 60px;
+  margin: 20px 0px 0px 400px;
 }
 
-footer ul {
-  float: right;
-  list-style: none;
+.fondo{
+  padding: 1px;
+  width: 62%;
+  margin: 0px 0px 0px 420px;
 }
 
-footer ul li {
-  float: left;
-  margin-left: 10px;
-}

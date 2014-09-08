@@ -5,7 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:Operaciones) %></th>
+      <th><%= model_class.human_attribute_name(:Operaciones , :class => 'uno')  %></th>
       <th><%= model_class.human_attribute_name(:Instructores) %></th>
       <th><%= model_class.human_attribute_name(:nombre) %></th>
       <th><%= model_class.human_attribute_name(:descripcion) %></th>
@@ -20,10 +20,14 @@
         <td><%= area.name %></td>
         <td><%= area.description %></td>
         <td>
+          <%= link_to t('.nueva'),
+            new_area_path, :class => 'btn btn-primary' %>
           <%= link_to t('.Ver'),
                        area_path(area), :class => 'btn btn-default btn-xs' %>
+          <%if can? :update, @user%>
           <%= link_to t('.Editar'),
                       edit_area_path(area), :class => 'btn btn-default btn-xs' %>
+          <% end %>
           <%= link_to t('.Eliminar'),
                       area_path(area),
                       :method => :delete,
@@ -35,6 +39,4 @@
   </tbody>
 </table>
 
-<%= link_to t('.nueva'),
-            new_area_path,
-            :class => 'btn btn-primary' %>
+

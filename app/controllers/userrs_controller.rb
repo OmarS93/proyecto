@@ -1,10 +1,13 @@
 class UserrsController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
+end
+  before_action :set_userr, only: [:show, :edit, :update, :destroy]
 
   # GET /userrs
   # GET /userrs.json
   def index
     @userrs = Userr.all
+    User.find(id).add_role(:admin)
   end
 
   # GET /userrs/1

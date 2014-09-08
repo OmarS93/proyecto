@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140831222300) do
+ActiveRecord::Schema.define(version: 20140905190559) do
 
   create_table "__sm_ext_mgmt", force: true do |t|
     t.text "type",  null: false
@@ -75,6 +75,10 @@ ActiveRecord::Schema.define(version: 20140831222300) do
     t.integer  "area_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "operations", ["area_id"], name: "index_operations_on_area_id"
@@ -106,5 +110,15 @@ ActiveRecord::Schema.define(version: 20140831222300) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "users", force: true do |t|
+    t.string   "email",            null: false
+    t.string   "crypted_password", null: false
+    t.string   "salt",             null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end

@@ -1,3 +1,4 @@
+
 /*!
  * bootswatch v3.2.0
  * Homepage: http://bootswatch.com
@@ -992,7 +993,7 @@ h6,
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.1;
-  color: #317eac;
+  color: white;
 }
 h1 small,
 h2 small,
@@ -2053,6 +2054,7 @@ table {
 }
 th {
   text-align: left;
+  color: white;
 }
 .table {
   width: 100%;

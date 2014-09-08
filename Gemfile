@@ -50,3 +50,11 @@ gem 'will_paginate'
 gem 'bootstrap-datepicker-rails'
 
 gem 'will_paginate-bootstrap'
+
+gem 'sorcery'
+
+gem 'paperclip'
+
+gem 'cancan'
+
+gem 'rolify'

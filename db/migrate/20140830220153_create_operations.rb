@@ -9,5 +9,6 @@ class CreateOperations < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_attachment :operations, :image
   end
 end

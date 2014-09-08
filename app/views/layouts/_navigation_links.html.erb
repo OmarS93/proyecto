@@ -2,3 +2,13 @@
 <%# add navigation links to this file %>
 <li><%= link_to "Areas", areas_path %></li>
 <li><%= link_to "Grupos", groups_path %></li>
+
+<div class="ingreso">
+	<% if current_user %>
+	      <%= link_to "Editar Perfil", edit_user_path(current_user.id) %>
+	      <%= link_to "Salir", :logout, method: :get %>
+	 <% else %>
+	      <%= link_to "Registrarce", new_user_path %> |
+	      <%= link_to "Ingresar", :login %>
+	<% end %>
+</div>
